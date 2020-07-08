@@ -4,8 +4,8 @@ import './style.css';
 
 const Signup = () => {
     return (
-        <div className="page-signup">
-            <div className="content">
+        <div id="page-signup">
+            <div className="register">
                 <h1>Registre-se</h1>
                 <form>
 
