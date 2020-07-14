@@ -4,7 +4,7 @@ import Sidebar from '../../Components/Sidebar';
 
 import './style.css';
 
-const Home = () => {
+const Os = () => {
 return(
     <div>
         <Header/>
@@ -16,4 +16,4 @@ return(
 )
 }
 
-export default Home;
+export default Os;
