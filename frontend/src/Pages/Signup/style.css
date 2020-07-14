@@ -1,3 +1,5 @@
+   /* SMALL DEVICES */
+
 #page-signup {
     width: 100%;
     height: 100%;
@@ -30,7 +32,6 @@
 #page-signup .register  {
     display: flex;
     flex-direction: column;
-    margin-left: 20%;
     margin-top: 50px;
     justify-items: center;
     flex-direction: column;
@@ -85,7 +86,7 @@
 
 #page-signup .register .footer {
     bottom: 15px;
-    margin-left: 34%;
+    margin-left: 23.5%;
 }
 
 #page-signup .register .footer strong {
@@ -101,7 +102,7 @@
     font-weight: normal;
     bottom: 20px;
     font-size: 20px;
-    margin-left: 32%; 
+    margin-left: 27%; 
 }
 
 #page-signup .continue {
@@ -126,7 +127,6 @@
 #page-signup .continue  {
     display: flex;
     flex-direction: column;
-    margin-left: 20%;
     margin-top: 50px;
     justify-items: center;
     flex-direction: column;
@@ -164,7 +164,7 @@
     box-sizing: border-box;
     border-radius: 10px;
     width: 100%;
-    height: 35px;
+    height: 45px;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
@@ -198,7 +198,7 @@
 
 #page-signup .continue .footer {
     bottom: 15px;
-    margin-left: 34%;
+    margin-left: 23.5%;
 }
 
 #page-signup .continue .footer strong {
@@ -214,5 +214,85 @@
     font-weight: normal;
     bottom: 20px;
     font-size: 20px;
-    margin-left: 25%; 
+    margin-left: 27%; 
+}
+
+
+/* TABLETS */
+
+@media screen and (min-width: 768px) {
+    #page-signup .register {
+        padding: 30px 60px;
+    }
+    #page-signup .register h1 {
+        font-size: 50px;
+    }
+    #page-signup .register  {
+        padding-top: 30px;
+    }
+    #page-signup .register label {
+        font-size: 30px;
+    }
+    #page-signup .register input {
+        background: #C4C4C4;
+        height: 45px;
+        font-size: 26px;
+    }
+    #page-signup .register button {
+        height: 45px;
+        font-size: 26px;
+    }
+
+    #page-signup .register .footer {
+        font-size: 20px;
+    }
+
+    #page-signup .continue {
+        padding: 30px 60px;
+    }
+    #page-signup .continue h1 {
+        font-size: 50px;
+    }
+    #page-signup .continue  {
+        padding-top: 30px;
+    }
+    #page-signup .continue label {
+        font-size: 30px;
+    }
+    #page-signup .continue input {
+        background: #C4C4C4;
+        height: 45px;
+        font-size: 26px;
+    }
+    #page-signup .continue button {
+        height: 45px;
+        font-size: 26px;
+    }
+
+    #page-signup .continue .footer {
+        font-size: 20px;
+    }
+
+     /* LARGE DEVICES - WIDE SCREEN */
+     
+     @media screen and (min-width:1152px){
+
+        #page-signin .register {
+            width: 100%;
+            padding-left: 30%;
+            padding-top: 50px;
+            padding: 50px 25%;
+        }
+        #page-signin .register label {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 30px;
+            text-align: start;
+            color: #000000;
+            padding-bottom: 10px;
+        }
+        #page-signin .register button {
+            font-size: 40px;
+        }
+    }
 }

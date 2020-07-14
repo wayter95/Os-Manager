@@ -45,8 +45,12 @@ const Signup = () => {
       <label htmlFor="phone">Telefone: *</label>
       <input type="text" placeholder="Digite seu Telefone para contato:" />
 
-      <label htmlFor="sector">Setor: *</label>
-      <input type="text" placeholder="Escolha seu setor:" />
+      <label htmlFor="sectot">Setor: *</label>
+      <select name="sector">
+      <option value="" disabled selected hidden>Selecione o setor em que trabalha</option>
+      <option value="Infra">Infra</option>
+      <option value="TI">TI</option>
+      </select>
 
       <label htmlFor="office">Cargo: *</label>
       <input type="text" placeholder="Digite seu cargo:" />
