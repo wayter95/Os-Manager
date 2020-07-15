@@ -6,11 +6,11 @@ import './style.css';
 
 const Home = () => {
 return(
-    <div>
+    <div id="page-home">
         <Header/> 
         <Sidebar/>
-        <div>
-            <h1></h1>
+        <div className="content">
+            <h1>Teste</h1>
         </div>
     </div>
 )

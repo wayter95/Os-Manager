@@ -5,10 +5,10 @@ import DropdawnUser from '../DropdawnUser';
 
 import './style.css'
 const Header: React.FC = () => {
-    const [status,setStatus] = useState(true);
+    const [status,setStatus] = useState(false);
     
     return (
-        <div id="component-header">
+        <div id="component-header" >
             <header>
             <h1>OS Manager</h1>
             <div  className="userInfo">

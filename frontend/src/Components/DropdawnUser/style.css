@@ -4,7 +4,8 @@
     background-color: #ffffff;
     top: 45px;
     right: 0;
-    box-shadow: 3px 10px 10px rgba(0, 0, 0.5);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0.5);
+    border-radius: 5px;
 }
 
 #component-dropdawn p {

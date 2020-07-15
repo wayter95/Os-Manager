@@ -40,3 +40,8 @@
 #component-header header .userInfo .arrowDown {
     padding: 10px 5px;
 }
+
+#component-header header .userInfo .arrowDown:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}

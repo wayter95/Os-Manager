@@ -2,13 +2,9 @@ import React from 'react';
 
 import './style.css'
 
-interface  UserProps{
-    cssClass?: string
-}
-
-const DropdawnUser: React.FC<UserProps> = (props) => {
+const DropdawnUser: React.FC = () => {
     return(
-        <div id="component-dropdawn" className={props.cssClass}>
+        <div id="component-dropdawn">
             <p>Perfil</p>
             <hr/>
             <p>Sair</p>
