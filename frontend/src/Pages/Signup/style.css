@@ -79,6 +79,9 @@
     font-size: 40px;
     color: #FFFFFF;
 }
+#page-signup .register button:hover {
+    opacity: 0.9;
+}
 
 #page-signup .register  label p {
     margin: 20px;
@@ -97,6 +100,7 @@
     color: #ff0707;
     font-size: 20px;
 }
+
 #page-signup .register  h2{
     color: #000000;
     font-weight: normal;
@@ -192,6 +196,10 @@
     color: #FFFFFF;
 }
 
+#page-signup .continue button:hover {
+    opacity: 0.9;
+}
+
 #page-signup .continue  label p {
     margin: 20px;
 }
@@ -209,6 +217,7 @@
     color: #ff0707;
     font-size: 20px;
 }
+
 #page-signup .continue  h2{
     color: #000000;
     font-weight: normal;

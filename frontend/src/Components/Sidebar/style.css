@@ -1,0 +1,50 @@
+#component-sidebar {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#component-sidebar section {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    background: #ffffff;
+    opacity: 0.9;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    background-size: cover;
+}
+
+#component-sidebar section ul {
+    text-align: start;
+    justify-content: start;
+    list-style-type: none;
+}
+
+#component-sidebar section ul li {
+    width: auto;
+    margin: 30px 50px 0;
+    color: rgb(0, 0, 0);
+    justify-content: left;
+    line-height: 1.5em;
+}
+
+#component-sidebar section ul li a {
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: auto;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    padding-left: 30px;
+}
+
+#component-sidebar section ul li a label {
+    font-size: 15px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+#component-sidebar section ul li a label:hover {
+    cursor: pointer;
+}

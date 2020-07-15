@@ -4,10 +4,10 @@ import Sidebar from '../../Components/Sidebar';
 
 import './style.css';
 
-const Home = () => {
+const Documents = () => {
 return(
     <div>
-        <Header/> 
+        <Header/>
         <Sidebar/>
         <div>
             <h1></h1>
@@ -16,4 +16,4 @@ return(
 )
 }
 
-export default Home;
+export default Documents;

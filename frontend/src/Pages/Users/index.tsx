@@ -4,16 +4,16 @@ import Sidebar from '../../Components/Sidebar';
 
 import './style.css';
 
-const Home = () => {
+const Users = () => {
 return(
     <div>
-        <Header/> 
+        <Header/>
         <Sidebar/>
         <div>
-            <h1></h1>
+            <h1>Usuarios</h1>
         </div>
     </div>
 )
 }
 
-export default Home;
+export default Users;
