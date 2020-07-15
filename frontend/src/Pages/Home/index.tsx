@@ -7,7 +7,7 @@ import './style.css';
 const Home = () => {
 return(
     <div>
-        <Header/>
+        <Header/> 
         <Sidebar/>
     </div>
 )

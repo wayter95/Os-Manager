@@ -1,25 +1,42 @@
-#component-header {
-    padding: 0;
-    margin: 0;
+#component-header {}
+
+#component-header header {
     display: flex;
     flex-direction: row;
+    background: #000000;
     width: 100%;
-    background: #000;
     height: 50px;
+    color: #ffffff;
+    padding: 0 10px;
 }
 
-#component-header h1 {
-    color: #FFF;
-    padding-left: 20px;
-    font-size: 30px;
-    padding-top: 5px;
+#component-header header h1 {
+    padding: 5px 10px;
+    font-style: normal;
     font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    color: #FFFFFF;
 }
 
-#component-header label {
-    color: #FFF;
-    justify-self: end;
-    padding-left: 20px;
+#component-header header .userInfo {
+    position: absolute;
+    display: flex;
+    font-style: normal;
     font-size: 30px;
-    padding-top: 5px;
+    text-align: center;
+    color: #FFFFFF;
+    right: 5%;
+}
+
+#component-header header .userInfo .icon {
+    padding: 5px 10px;
+}
+
+#component-header header .userInfo .name {
+    padding: 5px 0;
+}
+
+#component-header header .userInfo .arrowDown {
+    padding: 10px 5px;
 }
