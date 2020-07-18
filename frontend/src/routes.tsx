@@ -9,6 +9,7 @@ import Os from "./Pages/Os";
 import Documents from "./Pages/Documents";
 import Reports from "./Pages/Reports";
 import Users from "./Pages/Users";
+import Dashboard from "./Pages/Dashboard";
 
 const Routes = () => {
   return (
@@ -18,6 +19,7 @@ const Routes = () => {
         <Route component={Signup} path="/signup" />
         
         <Route component={Home} path="/home" />
+        <Route component={Dashboard} path="/dashboard" />
         <Route component={Os} path="/os" />
         <Route component={Documents} path="/documents" />
         <Route component={Reports} path="/reports" />
