@@ -1,0 +1,87 @@
+#page-dashboard{}
+
+#page-dashboard .content{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: calc(50vh - 50px) calc(50vh - 50px);
+    grid-template-areas: "o n" "g g";
+    grid-gap: 10px;
+    width: 80%;
+    margin-left: 20%;
+    height: 100%;
+}
+/* Ordem de Serviços Abertas*/
+#page-dashboard .osOpen{
+    grid-area: o;
+    border: 1px solid rgb(44, 44, 44);
+    border-radius: 10px;
+}
+#page-dashboard .osOpen h1{
+    font-size: 30px;
+    padding: 10px 20px;
+    color: #2D2079;
+}
+
+#page-dashboard .osOpen span{
+    display: flex;
+    justify-content: center;
+    font-size: 300px;
+    text-align: center;
+    padding: 10px 20px;
+    color: #2D2079;
+
+}
+
+/* Notificações*/
+#page-dashboard .notifications{
+    grid-area: n;
+    border: 1px solid rgb(44, 44, 44);
+    border-radius: 10px;
+}
+
+#page-dashboard .notifications h1{
+    font-size: 30px;
+    padding: 10px 20px;
+    color: #2D2079;
+}
+#page-dashboard .notifications ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 20px;
+}
+#page-dashboard .notifications ul li p{
+    color: #9E9E9E;
+    font-size: 16px;
+}
+
+#page-dashboard .notifications ul li span{
+    color: #ff0000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Graficos*/
+#page-dashboard .graph{
+    grid-area: g;
+    border: 1px solid rgb(44, 44, 44);
+    border-radius: 10px;
+}
+
+#page-dashboard .graph h1{
+    font-size: 30px;
+    padding: 10px 20px;
+    color: #2D2079;
+}
+
+#page-dashboard .graph label{
+    color: #424048;
+    font-size: 30px;
+    padding: 10px 20px;
+}
+#page-dashboard .graph label input{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
