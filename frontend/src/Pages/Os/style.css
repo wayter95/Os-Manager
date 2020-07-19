@@ -122,3 +122,26 @@
     padding: 10px 20px;
     color: #2D2079;
 }
+#page-os .content .allOs header{
+  font-size: 20px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#page-os .content .allOs ul li{
+  font-size: 16px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#page-os .content .allOs ul label{
+  color: rgb(126, 126, 126);
+}
+#page-os .content .allOs ul span{
+  color: rgb(255, 0, 0);
+}
+#page-os .content .allOs ul p{
+  color: rgb(0, 68, 255);
+}

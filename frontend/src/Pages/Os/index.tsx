@@ -49,11 +49,24 @@ const Os = () => {
 
                         <button type="submit">Salvar</button>
 
-
                     </form>
                 </div>
                 <div className="allOs">
                     <h1>Todas as minnhas OS:</h1>
+                    <header>
+                        <label>Assunto:</label>
+                        <label>Data OS:</label>
+                        <label>Prioridade:</label>
+                        <label>Andamento:</label>
+                    </header>
+                    <ul>
+                        <li>
+                        <label>Formatar meu pc</label>
+                        <label>08/06/2020</label>
+                        <span>Alta</span>
+                        <p>Iniciada</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

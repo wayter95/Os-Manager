@@ -1,10 +1,12 @@
 import React from 'react';
 import Header from '../../Components/Header';
 import Sidebar from '../../Components/Sidebar';
+import Chart from "react-apexcharts";
 
 import './style.css';
 
 const Dashboard = () => {
+ 
     return (
         <div id="page-dashboard">
             <Header />
@@ -35,6 +37,7 @@ const Dashboard = () => {
                         <input type="checkbox" />
                         Mensal
                     </label>
+
                 </div>
             </div>
         </div>

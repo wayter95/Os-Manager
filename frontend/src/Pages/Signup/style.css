@@ -88,8 +88,10 @@
 }
 
 #page-signup .register .footer {
-    bottom: 15px;
-    margin-left: 23.5%;
+    position: absolute;
+    bottom: 20px;
+    justify-content: center;
+    align-self: center;
 }
 
 #page-signup .register .footer strong {
@@ -205,8 +207,10 @@
 }
 
 #page-signup .continue .footer {
-    bottom: 15px;
-    margin-left: 23.5%;
+    position: absolute;
+    bottom: 20px;
+    justify-content: center;
+    align-self: center;
 }
 
 #page-signup .continue .footer strong {
