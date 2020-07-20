@@ -3,45 +3,62 @@
 
 #page-home .content{
     
-    padding: 20px;
-    display: grid;
-    grid-template-columns: calc(80vw - 30px)calc(50vw - 30px);
-    grid-template-rows: calc(35vh - 10px)calc(50vh - 60px);
-    grid-template-areas:"l" "n";
-    grid-gap: 10px;
-    width: 80%;
-    margin-left: 20%;
-    height: 100%;
-
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: calc(40vh - 50px) calc(60vh - 50px);
+  grid-template-areas:"l l" "n n";
+  grid-gap: 10px;
+  width: 80%;
+  margin-left: 20%;
+  height: 100%;
 }
-
+/* ULTIMA ORDEM DE SERVIÇO*/
 #page-home .lastOs {
    grid-area: l;
    border: 1px solid rgb(44, 44, 44);
-   border-radius: 5px;
+   border-radius: 10px;
+}
+
+#page-home .lastOs h1{
+  font-size: 30px;
+  padding: 10px 20px;
+  color: #2D2079;
 }
 
 #page-home .lastOs button{
-  margin-bottom: 10px;
-  background: #00ff00;
-  width: 6%;
-  height: 30px;
   border: none;
-  border-radius: 30px;
-  text-align: center;
-  color: #FFFFFF;
-  transition: opacity 0.2s;
-  justify-content: center;
-  justify-items: center;
+  background: #1DB73F;
+  width: 15%;
+  border-radius: 20px;
+  margin-left: 20%;
+  height: 40px;
+  color: #fff;
+  font-size: 30px;
 }
-#page-home .lastOs h1 button {
+#page-home .lastOs ul li {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  margin: 10px 10px;
 }
 
+#page-home .createOs ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 10px;
+}
 
+/* NOTIFICAÇÕES */
 #page-home .notifications {
    grid-area: n;
    border: 1px solid rgb(44, 44, 44);
-   border-radius: 5px;
+   border-radius: 10px;
+}
+
+#page-home .notifications h1 {
+  font-size: 30px;
+  padding: 10px 20px;
+  color: #2D2079;
 }
