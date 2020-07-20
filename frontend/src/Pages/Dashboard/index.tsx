@@ -1,12 +1,29 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import Header from '../../Components/Header';
 import Sidebar from '../../Components/Sidebar';
-import Chart from "react-apexcharts";
+import { Bar } from "react-chartjs-2";
 
 import './style.css';
 
 const Dashboard = () => {
- 
+
+    const data = {
+        labels: ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"],
+        datasets: [
+            {
+                label: "Semanal",
+                backgroundColor: "rgba(0, 128, 0,0.75)",
+                data: [4, 5, 1, 10, 8, 0, 0]
+            },
+            {
+                label: "Mensal",
+                backgroundColor: "rgba(0, 0, 255,0.75)",
+                data: [4, 5, 1, 10, 8, 0, 0,4, 5, 1, 10, 8, 0, 0,4, 5, 1, 10, 8, 0, 0,4, 5, 1, 10, 8, 0, 0,9,5]
+            },
+
+        ]
+    }
+
     return (
         <div id="page-dashboard">
             <Header />
@@ -28,16 +45,12 @@ const Dashboard = () => {
                 </div>
                 <div className="graph">
                     <h1>Ordens de Serviços Diarias:</h1>
-                    <label htmlFor="week">
-                        <input type="checkbox" />
-                        Semanal
-                    </label>
-
-                    <label htmlFor="month">
-                        <input type="checkbox" />
-                        Mensal
-                    </label>
-
+                    <Bar
+                        data={data}
+                        width={100}
+                        height={25}
+                        options={{ responsive: true }}
+                    />
                 </div>
             </div>
         </div>
