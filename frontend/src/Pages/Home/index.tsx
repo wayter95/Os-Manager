@@ -16,10 +16,10 @@ const Home = () => {
           <ul>
             <li>
               <h1>Ultimas OS </h1>
-              <button onClick={() => history.push("/os")}> Criar OS</button>       
+              <button onClick={() => history.push("/os")}> Criar OS</button>
             </li>
             <header>
-            <label>Assunto:</label>
+              <label>Assunto:</label>
               <label>Data OS:</label>
               <label>Prioridade:</label>
               <label>Andamento:</label>
@@ -32,10 +32,17 @@ const Home = () => {
                 <p>Iniciada</p>
               </li>
             </ul>
-          </ul>    
+          </ul>
         </div>
         <div className="notifications">
-          </div>
+          <h1>Notificações:</h1>
+          <ul>
+            <li>
+              <p>Seu chamado FORMATAR MEU PC foi checado pelos tecnicos e ja está em situação INICIADA</p>
+              <p>10/06/2020</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
