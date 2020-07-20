@@ -29,9 +29,11 @@
     font-weight: bold;
     color: #ffffff;
     border-radius: 10px;
-    opacity: 0.8;
+    transition: opacity 0.2s;
 }
-
+#page-documents .content .buttons button:hover{
+    opacity: 0.9;
+}
 
 /* Formularios */
 #page-documents .content .form{

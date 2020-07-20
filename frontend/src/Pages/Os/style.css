@@ -42,6 +42,7 @@
     height: 30px;
     margin-top: 5px;
     font-size: 20px;
+    padding-left: 20px;
   }
 
   /*Descrição*/
@@ -55,6 +56,7 @@
     margin-top: 5px;
     font-size: 16px;
     resize: none;
+    padding-left: 20px;
   }
   /*Prioridade*/
   #page-os .content .createOs form .priority{
@@ -64,6 +66,7 @@
     border: 1px solid rgb(44, 44, 44);
     height: 30px;
     width: 50%;
+    padding-left: 20px;
   }
   
   /*Equipamentos*/
@@ -76,6 +79,7 @@
     height: 30px;
     margin-top: 5px;
     font-size: 20px;
+    padding-left: 20px;
   }
   /*Local*/
   #page-os .content .createOs form .local{
@@ -87,6 +91,8 @@
     height: 30px;
     margin-top: 5px;
     font-size: 20px;
+    padding-left: 20px;
+
   }
   /*Troca de equipamento*/
   #page-os .content .createOs form .check{
