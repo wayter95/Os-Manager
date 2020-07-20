@@ -1,5 +1,4 @@
-#page-home{
-}
+#page-home{}
 
 #page-home .content{
     
@@ -36,29 +35,54 @@
   color: #fff;
   font-size: 30px;
 }
-#page-home .lastOs ul li {
+#page-home .content .lastOs ul li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 10px 10px;
+  font-size: 16px;
 }
 
-#page-home .createOs ul li {
+#page-home .content .lastOs header {
+  font-size: 20px;
+  padding: 10px 20px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin: 10px 10px;
 }
 
-/* NOTIFICAÇÕES */
-#page-home .notifications {
-   grid-area: n;
-   border: 1px solid rgb(44, 44, 44);
-   border-radius: 10px;
+
+#page-home .content .lastOs ul label{
+  color: rgb(126, 126, 126);
 }
 
-#page-home .notifications h1 {
+#page-home .content .lastOs ul span {
+  color: rgb(255, 0, 0);
+}
+
+#page-home .content .lastOs ul p{
+  color: rgb(0, 68, 255);
+}
+
+
+/*NOTIFICAÇÕES*/
+#page-home .content .notifications {
+  grid-area: n;
+  border: 1px solid rgb(44, 44, 44);
+  border-radius: 10px;
+}
+
+#page-home .content  .notifications h1{
   font-size: 30px;
   padding: 10px 20px;
   color: #2D2079;
+}
+#page-home .content  .notifications ul li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 20px;
+}
+#page-home .content  .notifications ul li p{
+  color: #9E9E9E;
+  font-size: 16px;
 }

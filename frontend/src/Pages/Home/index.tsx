@@ -16,26 +16,28 @@ const Home = () => {
           <ul>
             <li>
               <h1>Ultimas OS </h1>
-              <button onClick={() => history.push("/os")}> Criar OS</button>
+              <button onClick={() => history.push("/os")}> Criar OS</button>       
             </li>
-          </ul>
-          </div>
-        <div className="createOs">
-          <ul>
-            <li>
-            <b>Assunto</b>
-            <b>Data Os</b>
-            <b>Prioridade</b>
-            <b>andamento</b>
-            </li>
-          </ul>
-
-        </div>
+            <header>
+            <label>Assunto:</label>
+              <label>Data OS:</label>
+              <label>Prioridade:</label>
+              <label>Andamento:</label>
+            </header>
+            <ul>
+              <li>
+                <label>Formatar meu pc</label>
+                <label>08/06/2020</label>
+                <span>Alta</span>
+                <p>Iniciada</p>
+              </li>
+            </ul>
+          </ul>    
         </div>
         <div className="notifications">
-          <h1>Notificações</h1>
-        </div>
+          </div>
       </div>
+    </div>
   );
 };
 export default Home;
