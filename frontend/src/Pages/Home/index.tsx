@@ -19,10 +19,10 @@ const Home = () => {
               <button onClick={() => history.push("/os")}> Criar OS</button>
             </li>
             <header>
-              <label>Assunto:</label>
-              <label>Data OS:</label>
-              <label>Prioridade:</label>
-              <label>Andamento:</label>
+              <b>Assunto:</b>
+              <b>Data OS:</b>
+              <b>Prioridade:</b>
+              <b>Andamento:</b>
             </header>
             <ul>
               <li>
@@ -38,7 +38,10 @@ const Home = () => {
           <h1>Notificações:</h1>
           <ul>
             <li>
-              <p>Seu chamado FORMATAR MEU PC foi checado pelos tecnicos e ja está em situação INICIADA</p>
+              <p>
+                Seu chamado FORMATAR O MEU COMPUTADOR foi ACEITO pelos técnicos
+                e a situação da OS é INICIADA
+              </p>
               <p>10/06/2020</p>
             </li>
           </ul>
