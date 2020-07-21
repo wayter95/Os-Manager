@@ -1,0 +1,97 @@
+#page-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 20%;
+}
+
+#page-profile .sideProfile {
+    width: 50%;
+    float: left;
+    border: 1px solid rgb(44, 44, 44);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    height: 80vh;
+}
+
+#page-profile .sideProfile label{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: #000000;
+    padding-bottom: 10px;
+}
+
+#page-profile .profile {
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid rgb(44, 44, 44);
+}
+
+#page-profile .profile .icon {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #000000;
+    padding-bottom: 10px;
+}
+
+#page-profile .profile form {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #000000;
+    padding-bottom: 10px;
+}
+
+#page-profile .profile form label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#page-profile .profile form label p {
+    display: flex;
+    text-align: right;
+    margin-right: 20px;
+    position: absolute;
+    
+
+}
+
+#page-profile .profile form input {
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    width: 50%;
+    height: 30px;
+    font-size: 20px;
+    line-height: 45px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+#page-profile .profile form input:focus {
+    border: 2px solid #1b1b1b;
+    color: #000;
+}
+
+#page-profile .profile form button {
+    border: none;
+    background: #1DB73F;
+    width: 80%;
+    border-radius: 20px;
+    margin-left: 20%;
+    height: 40px;
+    color: #fff;
+    font-size: 30px;
+}
+
+#page-profile .profile form button:hover {
+    opacity: 0.9;
+}

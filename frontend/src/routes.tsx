@@ -7,9 +7,9 @@ import Signup from "./Pages/Signup";
 import Home from "./Pages/Home";
 import Os from "./Pages/Os";
 import Documents from "./Pages/Documents";
-import Reports from "./Pages/Reports";
 import Users from "./Pages/Users";
 import Dashboard from "./Pages/Dashboard";
+import Profile from "./Pages/Profile";
 
 const Routes = () => {
   return (
@@ -22,8 +22,8 @@ const Routes = () => {
         <Route component={Dashboard} path="/dashboard" />
         <Route component={Os} path="/os" />
         <Route component={Documents} path="/documents" />
-        <Route component={Reports} path="/reports" />
         <Route component={Users} path="/users" />
+        <Route component={Profile} path="/profile"/>
       </Switch>
     </BrowserRouter>
   );

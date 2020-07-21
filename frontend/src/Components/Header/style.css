@@ -8,6 +8,7 @@
     height: 50px;
     color: #ffffff;
     padding: 0 10px;
+    position: fixed;
 }
 
 #component-header header h1 {
