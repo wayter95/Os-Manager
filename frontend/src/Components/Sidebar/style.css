@@ -1,5 +1,5 @@
 #component-sidebar {
-    height: 100%;
+    height: calc(100% - 50px);
     margin: 0;
     padding: 0;
     
@@ -7,7 +7,8 @@
 
 #component-sidebar section {
     width: 20%;
-    height: 100%;
+    height: calc(100% - 50px);
+    margin-top: 50px;
     position: fixed;
     background: #ffffff;
     opacity: 0.9;

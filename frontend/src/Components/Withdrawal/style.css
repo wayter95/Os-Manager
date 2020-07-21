@@ -1,0 +1,96 @@
+#component-withdrawal h2{
+    padding-left: 20px;
+    font-size: 20px;
+}
+#component-withdrawal form{
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:"s s c c" "r r m m" "d d m m" "d d b b";
+    grid-gap: 10px;
+}
+
+/*Setor*/
+#component-withdrawal form .sector{
+    grid-area: s;
+}
+#component-withdrawal form .sector input{
+    border: 1px solid rgb(44, 44, 44);
+    width: 95%;
+    margin-top: 5px;
+    height: 30px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+/*Responsavel*/
+#component-withdrawal form .responsible{
+    grid-area: r;
+  
+}
+#component-withdrawal form .responsible input{
+    border: 1px solid rgb(44, 44, 44);
+    width: 95%;
+    height: 30px;
+    font-size: 20px;
+    margin-top: 5px;
+    padding-left: 20px;
+}
+/*Chamado*/
+#component-withdrawal form .called{
+    grid-area: c;
+}
+#component-withdrawal form .called select{
+    border: 1px solid rgb(44, 44, 44);
+    height: 30px;
+    width: 50%;
+    margin-top: 5px;
+    padding-left: 20px;
+}
+/*Motivo*/
+#component-withdrawal form .motive{
+    grid-area: m;
+}
+#component-withdrawal form .motive input{
+    border: 1px solid rgb(44, 44, 44);
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+/*Descrição*/
+#component-withdrawal form .description{
+    grid-area: d;
+
+}
+
+#component-withdrawal form .description textarea{
+    border: 1px solid rgb(44, 44, 44);
+    width: 95%;
+    height: 150px;
+    margin-top: 5px;
+    font-size: 16px;
+    resize: none;
+    padding-left: 20px;
+
+}
+
+/*Salvar*/
+#component-withdrawal form button{
+    grid-area: b;
+    border: none;
+    background: #1DB73F;
+    width: 50%;
+    border-radius: 20px;
+    margin-left: 50%;
+    height: 40px;
+    color: #fff;
+    font-size: 30px;
+    transition: opacity 0.2s;
+}
+
+#component-specifications form button:hover{
+    opacity: 0.9;
+}

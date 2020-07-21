@@ -1,0 +1,96 @@
+#component-mainreport h2{
+    padding-left: 20px;
+    font-size: 20px;
+}
+#component-mainreport form{
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:"s s c c" "r r m m" "d d m m" "d d b b";
+    grid-gap: 10px;
+}
+
+/*Setor*/
+#component-mainreport form .sector{
+    grid-area: s;
+}
+#component-mainreport form .sector input{
+    border: 1px solid rgb(44, 44, 44);
+    width: 95%;
+    margin-top: 5px;
+    height: 30px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+/*Responsavel*/
+#component-mainreport form .responsible{
+    grid-area: r;
+  
+}
+#component-mainreport form .responsible input{
+    border: 1px solid rgb(44, 44, 44);
+    width: 95%;
+    height: 30px;
+    font-size: 20px;
+    margin-top: 5px;
+    padding-left: 20px;
+}
+/*Chamado*/
+#component-mainreport form .called{
+    grid-area: c;
+}
+#component-mainreport form .called select{
+    border: 1px solid rgb(44, 44, 44);
+    height: 30px;
+    width: 50%;
+    margin-top: 5px;
+    padding-left: 20px;
+}
+/*Motivo*/
+#component-mainreport form .motive{
+    grid-area: m;
+}
+#component-mainreport form .motive input{
+    border: 1px solid rgb(44, 44, 44);
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+/*Descrição*/
+#component-mainreport form .description{
+    grid-area: d;
+
+}
+
+#component-mainreport form .description textarea{
+    border: 1px solid rgb(44, 44, 44);
+    width: 95%;
+    height: 150px;
+    margin-top: 5px;
+    font-size: 16px;
+    resize: none;
+    padding-left: 20px;
+
+}
+
+/*Salvar*/
+#component-mainreport form button{
+    grid-area: b;
+    border: none;
+    background: #1DB73F;
+    width: 50%;
+    border-radius: 20px;
+    margin-left: 50%;
+    height: 40px;
+    color: #fff;
+    font-size: 30px;
+    transition: opacity 0.2s;
+}
+
+#component-specifications form button:hover{
+    opacity: 0.9;
+}
