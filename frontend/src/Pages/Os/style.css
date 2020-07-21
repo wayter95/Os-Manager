@@ -9,11 +9,12 @@
     grid-gap: 10px;
     width: 80%;
     margin-left: 20%;
-    height: 100%;
+    height:calc(100% - 50px);
 }
 
 /* Criando OS*/
 #page-os .content .createOs{
+  margin-top: 50px;  
     border: 1px solid rgb(44, 44, 44);
     grid-area: c;
     border-radius: 10px;
@@ -52,7 +53,6 @@
   #page-os .content .createOs form .description textarea{
     border: 1px solid rgb(44, 44, 44);
     width: 95%;
-    height: 150px;
     margin-top: 5px;
     font-size: 16px;
     resize: none;

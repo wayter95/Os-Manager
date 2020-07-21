@@ -1,0 +1,60 @@
+#component-specifications {}
+
+#component-specifications h2{
+    margin-left: 20px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#component-specifications form{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#component-specifications form label{
+   
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+#component-specifications form input{
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 50%;
+    border: 1px solid rgb(44, 44, 44);
+    height: 30px;
+    padding-left: 20px;
+}
+
+#component-specifications form select{
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 50%;
+    border: 1px solid rgb(44, 44, 44);
+    height: 30px;
+    padding-left: 20px;
+}
+
+#component-specifications form textarea{
+    border: 1px solid rgb(44, 44, 44);
+    width: 50%;
+    height: 100px;
+    margin-top: 5px;
+    font-size: 16px;
+    resize: none;
+    padding-left: 20px;
+}
+#component-specifications form button{
+    border: none;
+    background: #1DB73F;
+    width: 25%;
+    border-radius: 20px;
+    margin-left: 74%;
+    height: 40px;
+    color: #fff;
+    font-size: 30px;
+    transition: opacity 0.2s;
+}
+
+#component-specifications form button:hover{
+    opacity: 0.9;
+}

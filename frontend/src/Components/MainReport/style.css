@@ -88,5 +88,9 @@
     height: 40px;
     color: #fff;
     font-size: 30px;
+    transition: opacity 0.2s;
+}
 
+#component-specifications form button:hover{
+    opacity: 0.9;
 }

@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 
 import Header from '../../Components/Header';
 import Sidebar from '../../Components/Sidebar';
@@ -11,16 +11,19 @@ import './style.css';
 
 const Documents = () => {
     const [state,setState] = useState('w');
+        useEffect(() => {
+           
+        },[])
     return (
         <div id="page-documents">
             <Header />
             <Sidebar />
             <div className="content">
                 <div className="buttons">
-                    <button onClick={() => setState('w')}>Retirada<br/>de equipamento</button>
-                    <button onClick={() => setState('m')}>Relatorio<br/>de manutenção</button>
+                    <button id="w" onClick={() => setState('w')}>Retirada<br/>de equipamento</button>
+                    <button id="m" onClick={() => setState('m')}>Relatorio<br/>de manutenção</button>
                     <button onClick={() => setState('s')}>Especificações<br/>de equipamento</button>
-                    <button disabled onClick={() => setState('o')}>Ordem<br/>de compra</button>
+                    <button className="disab" disabled onClick={() => setState('o')}>Ordem<br/>de compra</button>
                 </div>
                 <div className="form">
                     <h1>Dados para documento:</h1>

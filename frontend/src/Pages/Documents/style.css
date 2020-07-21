@@ -1,7 +1,11 @@
 #page-documents{
 
 }
-
+#page-documents h1{
+    font-size: 30px;
+    padding: 10px 20px;
+    color: #2D2079;
+}
 #page-documents .content{
     padding: 20px;
     display: grid;
@@ -15,11 +19,11 @@
 }
 /* Botões */
 #page-documents .content .buttons{
+    margin-top: 50px;  
     grid-area: b;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 2%;
 }
 #page-documents .content .buttons button{
     background: #164AFF;
@@ -31,18 +35,20 @@
     border-radius: 10px;
     transition: opacity 0.2s;
 }
+#page-documents .content .buttons .pressed{
+    background: #46973b;
+
+}
 #page-documents .content .buttons button:hover{
     opacity: 0.9;
 }
-
+#page-documents .content .buttons button:disabled{
+    opacity: 1;
+    cursor:not-allowed;
+}
 /* Formularios */
 #page-documents .content .form{
     border: 1px solid rgb(44, 44, 44);
     grid-area: f;
     border-radius: 10px;
-}
-#page-documents .content .form h1{
-    font-size: 30px;
-    padding: 10px 20px;
-    color: #2D2079;
 }
