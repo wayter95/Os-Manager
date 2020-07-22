@@ -8,6 +8,7 @@ import "./style.css";
 
 const Users = () => {
   const [isVisible, setVisible] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   return (
     <div id="page-users">
@@ -61,18 +62,28 @@ const Users = () => {
       {isVisible ? (
         <Modal>
           <h1>Gerar Token Para usuario:</h1>
-          <form>
-            <label htmlFor="">Tipo de usuario</label>
-            <input type="checkbox" />
-            <div className="btns">
-              <button className="save" type="submit">
-                Salvar
-              </button>
-              <button className="exit" onClick={() => setVisible(false)}>
-                Cancelar
-              </button>
-            </div>
-          </form>
+          <h2>
+            O usuario é um administrador?
+            <br />
+          </h2>
+          <div className="toggle">
+            <input
+              type="checkbox"
+              id="foo"
+              onClick={() => setIsAdmin(!isAdmin)}
+            />
+            <label htmlFor="foo"></label>
+            {isAdmin === true && <p>Sim</p>}
+            {isAdmin === false && <p>Não</p>}
+          </div>
+          <div className="btns">
+            <button className="save" type="button">
+              Salvar
+            </button>
+            <button className="exit" onClick={() => setVisible(false)}>
+              Cancelar
+            </button>
+          </div>
         </Modal>
       ) : null}
     </div>

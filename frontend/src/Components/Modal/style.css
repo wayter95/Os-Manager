@@ -30,6 +30,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  justify-content: center;
 }
 #component-modal .content-modal .btns .save {
   border: none;
@@ -40,6 +41,10 @@
   height: 40px;
   color: #fff;
   font-size: 30px;
+  transition: opacity 0.2s;
+}
+#component-modal .content-modal .btns .save:hover {
+  opacity: 0.9;
 }
 #component-modal .content-modal .btns .exit {
   border: none;
@@ -50,4 +55,63 @@
   height: 40px;
   color: #fff;
   font-size: 30px;
+  transition: opacity 0.2s;
+}
+#component-modal .content-modal .btns .exit:hover {
+  opacity: 0.9;
+}
+
+/*Toggle style*/
+#component-modal .content-modal .toggle {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#component-modal .content-modal .toggle input {
+  display: none;
+}
+#component-modal .content-modal .toggle label {
+  position: relative;
+  display: block;
+  margin-top: 20px;
+  height: 28px;
+  width: 52px;
+  background-color: #e5e5e5;
+  border: 1px #20aeb6 solid;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#component-modal .content-modal .toggle label:after {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 100px;
+  background: #fff;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+  content: "";
+  transition: all 0.3s ease;
+}
+#component-modal .content-modal .toggle label:active:after {
+  transform: scale(1.15, 0.85);
+}
+#component-modal .content-modal .toggle input:checked ~ label {
+  background-color: #0d02b3;
+  border-color: #0d02b3;
+}
+#component-modal .content-modal .toggle input:checked ~ label:after {
+  left: 25px;
+}
+
+#component-modal .content-modal .toggle p {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-left: 10px;
 }
