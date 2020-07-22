@@ -1,21 +1,21 @@
-#component-dropdawn {
-    position: absolute;
-    width: 200px;
-    background-color: #ffffff;
-    top: 45px;
-    right: 0;
-    box-shadow: 1px 5px 10px rgba(0, 0, 0.5);
-    border-radius: 5px;
+#component-dropdawn .content-dropdawn {
+  position: absolute;
+  width: 200px;
+  background-color: #ffffff;
+  top: 45px;
+  right: 0;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0.5);
+  border-radius: 5px;
 }
 
-#component-dropdawn p {
-    color: #000;
-    margin: 10px;
-    font-size: 20px;
-    transition: opacity 0.2s;
+#component-dropdawn .content-dropdawn p {
+  color: #000;
+  margin: 10px;
+  font-size: 20px;
+  transition: opacity 0.2s;
 }
 
-#component-dropdawn p:hover {
-    cursor: pointer;
-    opacity: 0.8;
+#component-dropdawn .content-dropdawn p:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }

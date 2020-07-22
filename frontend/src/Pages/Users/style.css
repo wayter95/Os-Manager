@@ -1,102 +1,103 @@
-#page-users {}
+#page-users {
+}
 
 #page-users .content {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: calc(40vh - 50px) calc(60vh - 50px);
-    grid-template-areas:"g g" "u u";
-    grid-gap: 10px;
-    width: 80%;
-    margin-left: 20%;
-    height: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: calc(40vh - 50px) calc(60vh - 50px);
+  grid-template-areas: "g g" "u u";
+  grid-gap: 10px;
+  width: 80%;
+  margin-left: 20%;
+  height: 100%;
 }
 /*Página de geraçao de código*/
 #page-users .getToken {
-    grid-area: g;
-    border: 1px solid rgb(44, 44, 44);
-    border-radius: 10px;
+  grid-area: g;
+  border: 1px solid rgb(44, 44, 44);
+  border-radius: 10px;
+  margin-top: 50px;
 }
 
-#page-users .getToken h1{
-    font-size: 30px;
-    padding: 10px 20px;
-    color: #2D2079;
+#page-users .getToken h1 {
+  font-size: 30px;
+  padding: 10px 20px;
+  color: #2d2079;
 }
-#page-users .getToken button{
-    border: none;
-    background: #1DB73F;
-    width: 15%;
-    border-radius: 20px;
-    margin-left: 20%;
-    height: 40px;
-    color: #fff;
-    font-size: 30px;
-}
-
-#page-users .content .getToken  ul li{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10px 10px;
-    font-size: 16px;
+#page-users .getToken button {
+  border: none;
+  background: #1db73f;
+  width: 15%;
+  border-radius: 20px;
+  margin-left: 20%;
+  height: 40px;
+  color: #fff;
+  font-size: 30px;
 }
 
-#page-users .content .getToken header{
-    font-size: 20px;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
+#page-users .content .getToken ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 10px;
+  font-size: 16px;
 }
 
-#page-users .content .getToken ul label{
-    color: rgb(126, 126, 126);
+#page-users .content .getToken header {
+  font-size: 20px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#page-users .content .getToken ul label {
+  color: rgb(126, 126, 126);
 }
 #page-users .content .getToken ul b {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-#page-users .content .getToken ul p{
-    color: rgb(0, 68, 255);
+#page-users .content .getToken ul p {
+  color: rgb(0, 68, 255);
 }
 
 /* USUARIOS ATIVOS */
 #page-users .content .activeUsers {
-    grid-area: u;
-    border: 1px solid rgb(44, 44, 44);
-    border-radius: 10px;
+  grid-area: u;
+  border: 1px solid rgb(44, 44, 44);
+  border-radius: 10px;
 }
 
-#page-users .content .activeUsers header{
-    font-size: 20px;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
+#page-users .content .activeUsers header {
+  font-size: 20px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
-#page-users .content .activeUsers header b{
-    font-weight: bold;
+#page-users .content .activeUsers header b {
+  font-weight: bold;
 }
-
 
 #page-users .content .activeUsers h1 {
-    font-size: 30px;
-    padding: 10px 20px;
-    color: #2D2079;
+  font-size: 30px;
+  padding: 10px 20px;
+  color: #2d2079;
 }
 
 #page-users .content .activeUsers ul li {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 20px;
 }
 
 #page-users .content .activeUsers ul li p {
-    color: #9E9E9E;
-    font-size: 16px;
+  color: #9e9e9e;
+  font-size: 16px;
 }
 
-#page-users .content .activeUsers ul li span{
-    color: rgb(255, 0, 0);
+#page-users .content .activeUsers ul li span {
+  color: rgb(255, 0, 0);
 }

@@ -9,9 +9,11 @@ const DropdawnUser: React.FC = () => {
   const history = useHistory();
   return (
     <div id="component-dropdawn">
-      <p onClick={() => history.push("profile")}>Perfil</p>
-      <hr />
-      <p onClick={() => logout}>Sair</p>
+      <div className="content-dropdawn">
+        <p onClick={() => history.push("profile")}>Perfil</p>
+        <hr />
+        <p onClick={() => logout}>Sair</p>
+      </div>
     </div>
   );
 };

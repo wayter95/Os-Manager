@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../Components/Header";
 import Sidebar from "../../Components/Sidebar";
+
+import Modal from "../../Components/Modal";
 
 import "./style.css";
 
 const Users = () => {
+  const [isVisible, setVisible] = useState(false);
+
   return (
     <div id="page-users">
       <Header />
@@ -14,7 +18,7 @@ const Users = () => {
           <ul>
             <li>
               <h1>Códigos sem uso </h1>
-              <button> Gerar novo</button>
+              <button onClick={() => setVisible(true)}>Gerar novo</button>
             </li>
             <header>
               <b>Código:</b>
@@ -31,7 +35,7 @@ const Users = () => {
           </ul>
         </div>
         <div className="activeUsers">
-            <h1>Usuarios:</h1>
+          <h1>Usuarios:</h1>
           <header>
             <b>Nome:</b>
             <b>Setor</b>
@@ -39,8 +43,8 @@ const Users = () => {
             <b>Telefone</b>
           </header>
           <ul>
-          <li>
-            <label>Wayter Phelps</label>
+            <li>
+              <label>Wayter Phelps</label>
               <label>Comunicação e TI</label>
               <span>Admin</span>
               <label>(34)9 8893-3932</label>
@@ -54,6 +58,23 @@ const Users = () => {
           </ul>
         </div>
       </div>
+      {isVisible ? (
+        <Modal>
+          <h1>Gerar Token Para usuario:</h1>
+          <form>
+            <label htmlFor="">Tipo de usuario</label>
+            <input type="checkbox" />
+            <div className="btns">
+              <button className="save" type="submit">
+                Salvar
+              </button>
+              <button className="exit" onClick={() => setVisible(false)}>
+                Cancelar
+              </button>
+            </div>
+          </form>
+        </Modal>
+      ) : null}
     </div>
   );
 };
