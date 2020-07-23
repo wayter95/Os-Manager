@@ -1,12 +1,19 @@
-import React from 'react';
+import React,{useState} from 'react';
+import Modal from '../Modal';
 
 import './style.css';
 
 const Specifications: React.FC = () => {
+    const [isVisible, setVisible] = useState(false);
+    function handleSubmit(e:any){
+        e.preventDefault();
+
+        setVisible(true);
+    }
     return (
         <div id="component-specifications">
             <h2>Especificações de equipamento</h2>
-            <form action="">
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="">Setor:*</label>
                 <input type="text" />
 
@@ -26,8 +33,19 @@ const Specifications: React.FC = () => {
                 <label>Descrição:*</label>
                 <textarea placeholder="Ex: Um computador da 4° geração com 8gb de RAM, 1tb de hdd..." />
 
-                <button>Salvar</button>
+                <button type="submit">Salvar</button>
             </form>
+            {
+                isVisible?(
+                    <Modal>
+                        <h1>Deseja gerar este documento?</h1>
+                          <div className="btns">
+                            <button className="save" type="button">Salvar</button>
+                            <button className="exit" onClick={() => setVisible(false)}>Cancelar</button>
+                        </div>
+                    </Modal>
+                ):null
+            }
         </div>
     )
 }

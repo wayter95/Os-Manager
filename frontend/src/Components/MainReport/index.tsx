@@ -1,12 +1,18 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import Modal from '../Modal';
 import './style.css';
 
 const MainReport: React.FC = () => {
+    const [isVisible, setVisible] = useState(false);
+    function handleSubmit(e: any) {
+        e.preventDefault();
+
+        setVisible(true);
+    }
     return (
         <div id="component-mainreport">
             <h2>Relatorios de manuntenção</h2>
-            <form action="">
+            <form onSubmit={handleSubmit}>
                 <label className="sector">
                     <p>Setor: *</p>
                     <input type="text" />
@@ -33,6 +39,17 @@ const MainReport: React.FC = () => {
                 <button type="submit">Salvar </button>
 
             </form>
+            {
+                isVisible ? (
+                    <Modal>
+                        <h1>Deseja gerar este documento?</h1>
+                        <div className="btns">
+                            <button className="save" type="button">Salvar</button>
+                            <button className="exit" onClick={() => setVisible(false)}>Cancelar</button>
+                        </div>
+                    </Modal>
+                ) : null
+            }
         </div>
     )
 }

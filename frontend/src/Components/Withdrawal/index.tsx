@@ -1,12 +1,19 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 import './style.css';
+import Modal from '../Modal';
 
 const Withdrawal: React.FC = () => {
+    const [isVisible, setVisible] = useState(false);
+    function handleSubmit(e:any){
+        e.preventDefault();
+
+        setVisible(true);
+    }
     return (
         <div id="component-withdrawal">
             <h2>Retirada de equipamento</h2>
-            <form action="">
+            <form onSubmit={handleSubmit}>
                 <label className="sector">
                     <p>Setor: *</p>
                     <input type="text" />
@@ -32,6 +39,17 @@ const Withdrawal: React.FC = () => {
                 </label>
                 <button type="submit">Salvar </button>
             </form>
+            {
+                isVisible?(
+                    <Modal>
+                        <h1>Deseja gerar este documento?</h1>
+                          <div className="btns">
+                            <button className="save" type="button">Salvar</button>
+                            <button className="exit" onClick={() => setVisible(false)}>Cancelar</button>
+                        </div>
+                    </Modal>
+                ):null
+            }
         </div>
     )
 }

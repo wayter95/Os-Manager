@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../Components/Header';
 import Sidebar from '../../Components/Sidebar';
+
+import Modal from '../../Components/Modal';
 
 import './style.css';
 
 const Os = () => {
+    const [isVisible, setVisible] = useState(false);
+
+    function handleSubmit(e: any) {
+        e.preventDefault();
+
+        setVisible(true)
+    }
     return (
         <div id="page-os">
             <Header />
@@ -12,7 +21,7 @@ const Os = () => {
             <div className="content">
                 <div className="createOs">
                     <h1>Criar OS:</h1>
-                    <form action="">
+                    <form onSubmit={handleSubmit}>
                         <label className="subject">
                             <p>Assunto: *</p>
                             <input type="text" />
@@ -61,14 +70,30 @@ const Os = () => {
                     </header>
                     <ul>
                         <li>
-                        <label>Formatar meu pc</label>
-                        <label>08/06/2020</label>
-                        <span>Alta</span>
-                        <p>Iniciada</p>
+                            <label>Formatar meu pc</label>
+                            <label>08/06/2020</label>
+                            <span>Alta</span>
+                            <p>Iniciada</p>
                         </li>
                     </ul>
                 </div>
             </div>
+            {
+                isVisible ? (
+                    <Modal >
+                        <h1>Tem certesa que deseja criar este chamado ?</h1>
+                        <p>Assunto: <span>Formatar PC</span></p>
+                        <p>Equipamento: <span>Computador pessoal</span></p>
+                        <p>Local: <span>Almoxarifado</span></p>
+                        <p>Troca de equipamento: <span>Não</span></p>
+                        <p>Descrião: <span>O computador esta travando muito!</span></p>
+                        <div className="btns">
+                            <button className="save" type="button">Salvar</button>
+                            <button className="exit" onClick={() => setVisible(false)}>Cancelar</button>
+                        </div>
+                    </Modal>
+                ) : null
+            }
         </div>
     )
 }
