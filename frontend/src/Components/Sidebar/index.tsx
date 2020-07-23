@@ -14,6 +14,11 @@ const Sidebar: React.FC = () => {
             </Link>
           </li>
           <li>
+            <Link to="/dashboard">
+              <label htmlFor="dashboard">Dashboard</label>
+            </Link>
+          </li>
+          <li>
             <Link to="/os">
               <label htmlFor="os">Ordens de serviços</label>
             </Link>
