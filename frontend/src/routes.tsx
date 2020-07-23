@@ -10,6 +10,7 @@ import Documents from "./Pages/Documents";
 import Users from "./Pages/Users";
 import Dashboard from "./Pages/Dashboard";
 import Profile from "./Pages/Profile";
+import Info from "./Pages/Info";
 
 const Routes = () => {
   return (
@@ -17,13 +18,15 @@ const Routes = () => {
       <Switch>
         <Route component={Signin} exact path="/" />
         <Route component={Signup} path="/signup" />
-        
+
         <Route component={Home} path="/home" />
         <Route component={Dashboard} path="/dashboard" />
-        <Route component={Os} path="/os" />
+        <Route component={Os} exact path="/os" />
         <Route component={Documents} path="/documents" />
         <Route component={Users} path="/users" />
-        <Route component={Profile} path="/profile"/>
+        <Route component={Profile} path="/profile" />
+
+        <Route component={Info} path="/os/info" />
       </Switch>
     </BrowserRouter>
   );

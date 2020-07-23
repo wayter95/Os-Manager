@@ -1,0 +1,15 @@
+#page-info {
+}
+
+#page-info .content {
+  width: 80%;
+  padding: 70px 20px 20px 20px;
+  margin-left: 20%;
+  height: calc(100% - 50px);
+}
+#page-info .content h1 {
+  font-size: 30px;
+  color: #2d2079;
+}
+#page-info .content form {
+}
