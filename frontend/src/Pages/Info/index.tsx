@@ -10,43 +10,60 @@ const Info = () => {
       <Header />
       <Sidebar />
       <div className="content">
-        <h1>Acompanhe o atendimento</h1>
-        <form>
+        <h1>Chamado N° 01</h1>
+        <div className="os">
           <label className="subject">
-            <p>Assunto: *</p>
-            <input type="text" />
+            <p>Assunto:</p>
+            <input type="text" placeholder="teste" disabled />
           </label>
-
+          <label className="user">
+            <p>Usuario:</p>
+            <input type="text" placeholder="teste" disabled />
+          </label>
+          <label className="local">
+            <p>Local:</p>
+            <input type="text" placeholder="teste" disabled />
+          </label>
+          <label className="equipament">
+            <p>Equipamento:</p>
+            <input type="text" placeholder="teste" disabled />
+          </label>
           <label className="description">
-            <p>Descrição: *</p>
+            <p>Descrição: </p>
+            <textarea placeholder="teste" disabled />
+          </label>
+          <label className="urgency">
+            <p>Urgencia:</p>
+            <input type="text" placeholder="teste" disabled />
+          </label>
+          <label className="shiftEquipament">
+            <p>Troca de equipamento:</p>
+            <input type="text" placeholder="teste" disabled />
+          </label>
+        </div>
+
+        <form >
+        <h1>Gerenciar chamado: </h1>
+          <label className="evaluation">
+            <p>Avaliação:</p>
             <textarea />
           </label>
-
-          <label className="priority">
-            <p>Priodidade:</p>
+          <label className="progress">
+            <p>Andamento:</p>
             <select name="" id="">
-              <option value="">Baixa</option>
-              <option value="">Normal</option>
-              <option value="">Alta</option>
+              <option value="init">Iniciada</option>
+              <option value="progress">Andamento</option>
+              <option value="done">Concluida</option>
             </select>
           </label>
-
-          <label className="equipaments">
-            <p>Equipamento: *</p>
-            <input type="text" />
-          </label>
-
-          <label className="local">
-            <p>Local: *</p>
-            <input type="text" />
-          </label>
-
           <label className="check">
             <input type="checkbox" />
-            Troca de Equipamento
+            <p>Troca de equipamento:</p>
           </label>
-
-          <button type="submit">Salvar</button>
+          <div className="btns">
+            <button className="save" type="submit">Salvar</button>
+            <button className="cancel" type="button">Cancelar</button>
+          </div>
         </form>
       </div>
     </div>
