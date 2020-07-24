@@ -11,6 +11,8 @@ import Users from "./Pages/Users";
 import Dashboard from "./Pages/Dashboard";
 import Profile from "./Pages/Profile";
 import Info from "./Pages/Info";
+import Identify from "./Pages/Identify";
+import Recovery from "./Pages/Recovery";
 
 const Routes = () => {
   return (
@@ -25,8 +27,9 @@ const Routes = () => {
         <Route component={Documents} path="/documents" />
         <Route component={Users} path="/users" />
         <Route component={Profile} path="/profile" />
-
         <Route component={Info} path="/os/info" />
+        <Route component={Identify} path="/identify" />
+        <Route component={Recovery} path="/recovery" />
       </Switch>
     </BrowserRouter>
   );

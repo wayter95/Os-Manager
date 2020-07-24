@@ -22,6 +22,7 @@ return(
                 <input type="password" placeholder="Digite sua senha:"/>
 
                 <button type="submit" onClick={() => history.push('/home')}>ENTRAR</button>
+                <a href="/identify">Esqueceu sua senha?</a>
                 <label className="or"><hr /> <p> ou </p> <hr /></label>
                 <button onClick={() => history.push('/signup')}>REGISTRAR</button>
             </form>
