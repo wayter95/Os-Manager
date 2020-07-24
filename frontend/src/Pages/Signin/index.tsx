@@ -1,9 +1,34 @@
-import React from 'react';
+import React,{useState} from 'react';
+
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import {useHistory} from 'react-router-dom';
+
 import './style.css';
 
+toast.configure(
+    
+);
 const Signin = () => {
+    const [username, setUsername] = useState('');
+    const [password,setPassword] = useState('');
     const history = useHistory();
+
+    const handleSubmit = (e:any) =>{
+        e.preventDefault();
+
+        if(username === 'admin' && password === 'admin'){
+            history.push('/home')
+            toast.success(`Seja bem vindo ${username}`)
+        }
+        else{
+            toast.error('Usuario ou senha incorretos',{
+                position: toast.POSITION.TOP_RIGHT,
+                autoClose: 8000
+            });
+        }
+    }
 return(
     <div id="page-signin">
         <section className="logo-bar">
@@ -14,14 +39,22 @@ return(
         <div className="content"> 
             <h1>Acesse sua conta!</h1>
 
-            <form >
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="">Nome de usuario: *</label>
-                <input type="text" placeholder="Digite seu nome de usuario:"/>
+                <input
+                type="text"
+                placeholder="Digite seu nome de usuario:"
+                value={username}
+                onChange={e => setUsername(e.target.value)}/>
 
                 <label htmlFor="">Senha: *</label>
-                <input type="password" placeholder="Digite sua senha:"/>
+                <input 
+                type="password" 
+                placeholder="Digite sua senha:"
+                value={password}
+                onChange={e => setPassword(e.target.value)}/>
 
-                <button type="submit" onClick={() => history.push('/home')}>ENTRAR</button>
+                <button type="submit" >ENTRAR</button>
                 <a href="/identify">Esqueceu sua senha?</a>
                 <label className="or"><hr /> <p> ou </p> <hr /></label>
                 <button onClick={() => history.push('/signup')}>REGISTRAR</button>
