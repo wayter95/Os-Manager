@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Route, BrowserRouter, Switch } from "react-router-dom";
+import { Route, BrowserRouter, Switch,Redirect,RouteProps as ReactDOMRouteProps } from "react-router-dom";
 
 import Signin from "./Pages/Signin";
 import Signup from "./Pages/Signup";
@@ -13,6 +13,11 @@ import Profile from "./Pages/Profile";
 import Info from "./Pages/Info";
 import Identify from "./Pages/Identify";
 import Recovery from "./Pages/Recovery";
+
+interface RouteProps extends ReactDOMRouteProps {
+  isAdmin?: boolean;
+  component: React.ComponentType;
+}
 
 const Routes = () => {
   return (

@@ -1,7 +1,7 @@
-import React from "react";
+import Axios from 'axios';
 
-const api = () => {
-
-}
+const api = Axios.create({
+    baseURL:""
+})
 
 export default api;
