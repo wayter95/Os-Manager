@@ -5,7 +5,6 @@ import { FaUserCircle } from "react-icons/fa";
 import "./style.css";
 
 const EditProfile: React.FC = () => {
-  const [isVisible, setVisible] = useState(false);
   const history = useHistory();
   const [name, setName] = useState("");
   const [userName, setUsername] = useState("");
@@ -16,7 +15,6 @@ const EditProfile: React.FC = () => {
 
   function handleSubmit(e: any) {
     e.preventDefault();
-    setVisible(true);
   }
   return (
     <div id="edit-profile">

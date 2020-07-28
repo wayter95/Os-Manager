@@ -16,12 +16,10 @@ import Identify from "./Pages/Identify";
 import Recovery from "./Pages/Recovery";
 
 interface RouteProps extends ReactDOMRouteProps {
-  isAdmin?: boolean;
   component: React.ComponentType;
 }
 
 const PrivateRoute: React.FC<RouteProps> = ({
-  isAdmin = false,
   component: Component,
   ...rest
 }) => {
@@ -32,24 +30,30 @@ const PrivateRoute: React.FC<RouteProps> = ({
     <Route 
     {...rest}
     render={() => {
-      return !isAdmin ? (
+      return isSigned ? (
         <Component />
-      ):(
-        <>
-        {
-          isSigned ? (
-            <Component />
-          ):  (
-            <Redirect to="/"/>
-          )
-        }
-        </>
-      )
+      ): <Redirect to="/"/>
     }}
     />
   )
 }
-
+const AdminRoute: React.FC<RouteProps> = ({
+  component: Component,
+  ...rest
+}) => {
+  const {user} = useAuth();
+  const isAdmin = user.codigo.isAdmin;
+  return(
+    <Route 
+    {...rest}
+    render={() => {
+      return isAdmin ? (
+        <Component />
+      ):<Redirect to="/home" />
+    }}
+    />
+  )
+}
 const Routes = () => {
   return (
     <BrowserRouter>
@@ -58,12 +62,13 @@ const Routes = () => {
         <Route component={Signup} path="/signup" />
 
         <PrivateRoute component={Home} path="/home" />
-        <PrivateRoute isAdmin component={Dashboard} path="/dashboard" />
         <PrivateRoute component={Os} exact path="/os" />
-        <PrivateRoute isAdmin component={Documents} path="/documents" />
-        <PrivateRoute isAdmin component={Users} path="/users" />
         <PrivateRoute component={Profile} path="/profile" />
-        <PrivateRoute isAdmin component={Info} path="/os/info" />
+
+        <AdminRoute component={Dashboard} path="/dashboard" />
+        <AdminRoute component={Documents} path="/documents" />
+        <AdminRoute component={Users} path="/users" />
+        <AdminRoute component={Info} path="/os/info" />
 
         <Route component={Identify} path="/identify" />
         <Route component={Recovery} path="/recovery" />

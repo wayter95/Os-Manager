@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import Modal from "../Modal";
 import { useHistory } from "react-router-dom";
-import { FaUserCircle, FaAngleDown } from "react-icons/fa";
 import "./style.css";
 
 const ChangePassword: React.FC = () => {

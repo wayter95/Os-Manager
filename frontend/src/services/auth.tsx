@@ -18,7 +18,7 @@ interface User {
 interface Codigo {
   id: string;
   codigo: string;
-  idAdmin: boolean
+  isAdmin: boolean
 }
 export interface ISignInCredentials {
   email: string;
@@ -68,7 +68,6 @@ const AuthProvider: React.FC = ({ children }) => {
     },
     []
   )
-
   const signOut = useCallback(() => {
     localStorage.removeItem('@OsManager:token');
     localStorage.removeItem('@OsManager:user');
