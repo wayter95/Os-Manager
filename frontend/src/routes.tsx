@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Route, BrowserRouter, Switch } from "react-router-dom";
+import { Route, BrowserRouter, Switch,Redirect,RouteProps as ReactDOMRouteProps } from "react-router-dom";
 
 import Signin from "./Pages/Signin";
 import Signup from "./Pages/Signup";
@@ -11,7 +11,13 @@ import Users from "./Pages/Users";
 import Dashboard from "./Pages/Dashboard";
 import Profile from "./Pages/Profile";
 import Info from "./Pages/Info";
-import ChangePassword from "./Components/ChangePassword";
+import Identify from "./Pages/Identify";
+import Recovery from "./Pages/Recovery";
+
+interface RouteProps extends ReactDOMRouteProps {
+  isAdmin?: boolean;
+  component: React.ComponentType;
+}
 
 const Routes = () => {
   return (
@@ -27,6 +33,8 @@ const Routes = () => {
         <Route component={Users} path="/users" />
         <Route component={Profile} path="/profile" />
         <Route component={Info} path="/os/info" />
+        <Route component={Identify} path="/identify" />
+        <Route component={Recovery} path="/recovery" />
       </Switch>
     </BrowserRouter>
   );

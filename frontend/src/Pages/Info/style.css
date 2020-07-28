@@ -11,5 +11,147 @@
   font-size: 30px;
   color: #2d2079;
 }
+
+/*Dados do chamado*/
+#page-info .content .os {
+  margin-top: 20px;
+  width: 100%;
+  height:50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 50px 50px 50px 50px;
+  grid-template-areas:"a u" "l e" "d g" "d t";
+  grid-gap: 10px;
+}
+#page-info .content .os input{
+  cursor: default;
+  border: 1px solid #000;
+  width: 100%;
+  height: 30px;
+  margin-top: 5px;
+  font-size: 16px;
+  padding: 0 20px;
+}
+#page-info .content .os textarea{
+  border: 1px solid #000;
+  cursor: default;
+  width: 100%;
+  height: 90px;
+  margin-top: 5px;
+  font-size: 16px;
+  padding: 0 20px;
+  resize: none;
+}
+#page-info .content .os .subject{
+  grid-area: a;
+}
+#page-info .content .os .user{
+  grid-area: u;
+}
+#page-info .content .os .local{
+  grid-area: l;
+}
+#page-info .content .os .equipament{
+  grid-area: e;
+}
+#page-info .content .os .description{
+  grid-area: d;
+}
+#page-info .content .os .urgency{
+  grid-area: g;
+}
+#page-info .content .os .shiftEquipament{
+  grid-area: t; 
+}
+/*Formulario*/
 #page-info .content form {
+  width: 100%;
+  height: 50%;
+  margin-top: 20px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 10px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 50px 50px;
+  grid-template-areas:"h h" "a p" "a t" "b b" ;
+  grid-gap: 10px;
+}
+#page-info .content form h1 {
+  grid-area: h;
+}
+#page-info .content form .evaluation {
+  grid-area: a;
+}
+
+#page-info .content form .evaluation textarea {
+  border: 1px solid #000;
+  cursor: default;
+  width: 100%;
+  height: 90px;
+  margin-top: 5px;
+  font-size: 16px;
+  padding: 0 20px;
+  resize: none;
+}
+/*Progresso*/
+#page-info .content form .progress {
+  grid-area: p;
+}
+#page-info .content form .progress select {
+    margin-top: 5px;  
+    border: 1px solid rgb(44, 44, 44);
+    height: 30px;
+    width: 50%;
+    padding-left: 20px;
+}
+
+/*Checking*/
+#page-info .content form .check {
+  grid-area: t;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+#page-info .content form .check input {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+/*Botões*/
+#page-info .content form .btns {
+  grid-area: b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+#page-info .content form .btns .save{
+  border: none;
+  background: #1db73f;
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 200px;
+  height: 40px;
+  color: #fff;
+  font-size: 30px;
+  transition: opacity 0.2s;
+}
+#page-info .content form .btns .save:hover{
+  opacity: 0.9;
+}
+#page-info .content form .btns .cancel{
+  border: none;
+  background: #e70b0b;
+  width: 200px;
+  border-radius: 20px;
+  margin-left: 20px;
+  height: 40px;
+  color: #fff;
+  font-size: 30px;
+  transition: opacity 0.2s;
+}
+#page-info .content form .btns .cancel:hover{
+  opacity: 0.9;
 }
