@@ -16,32 +16,17 @@
     height: 80vh;
 }
 
-#page-profile .sideProfile label{
+#page-profile .sideProfile button{
     font-style: normal;
     font-weight: normal;
-    font-size: 25px;
+    font-size: 30px;
     color: #000000;
     padding-bottom: 10px;
+    background-color: rgb(255, 255, 255);
 }
 
-#page-profile .profile {
-    width: 100%;
-    padding: 15px 30px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    border: 1px solid rgb(44, 44, 44);
-}
-
-#page-profile .profile .icon {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    color: #000000;
-    padding-bottom: 10px;
-}
-
-#page-profile .profile form {
+#page-profile .form {
+    width: 50%;
     display: flex;
     flex-direction: column;
     font-style: normal;
@@ -51,21 +36,18 @@
     padding-bottom: 10px;
 }
 
-#page-profile .profile form label {
+#page-profile .form form label {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-#page-profile .profile form label p {
+#page-profile .form form label p {
     display: flex;
     text-align: right;
     margin-right: 20px;
-    position: absolute;
-    
-
 }
 
-#page-profile .profile form input {
+#page-profile .form form input {
     border: 1px solid #000000;
     box-sizing: border-box;
     width: 50%;
@@ -76,12 +58,12 @@
     margin-bottom: 20px;
 }
 
-#page-profile .profile form input:focus {
+#page-profile .form form input:focus {
     border: 2px solid #1b1b1b;
     color: #000;
 }
 
-#page-profile .profile form button {
+#page-profile .form button {
     border: none;
     background: #1DB73F;
     width: 80%;
@@ -92,6 +74,6 @@
     font-size: 30px;
 }
 
-#page-profile .profile form button:hover {
+#page-profile .form button:hover {
     opacity: 0.9;
 }

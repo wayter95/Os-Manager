@@ -11,6 +11,7 @@ import Users from "./Pages/Users";
 import Dashboard from "./Pages/Dashboard";
 import Profile from "./Pages/Profile";
 import Info from "./Pages/Info";
+import ChangePassword from "./Components/ChangePassword";
 
 const Routes = () => {
   return (
@@ -25,7 +26,6 @@ const Routes = () => {
         <Route component={Documents} path="/documents" />
         <Route component={Users} path="/users" />
         <Route component={Profile} path="/profile" />
-
         <Route component={Info} path="/os/info" />
       </Switch>
     </BrowserRouter>
