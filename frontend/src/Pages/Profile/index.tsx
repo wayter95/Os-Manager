@@ -1,47 +1,31 @@
-import React from "react";
-import { FaUserCircle, FaAngleDown } from "react-icons/fa";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./style.css";
+import Header from "../../Components/Header";
+
+import EditProfile from "../../Components/EditProfile";
+import ChangePassword from "../../Components/ChangePassword";
 
 const Profile = () => {
+  const [state, setState] = useState("p");
   const history = useHistory();
   return (
-    <div id="page-profile">
-      <section className="sideProfile">
-        <label>Editar Perfil</label>
-        <label>Alterar senha</label>
-      </section>
-      <div className="profile">
-        <label className="icon">
-          <FaUserCircle size="40" /> User Name
-        </label>
-        <form>
-          <label>
-            <p>Nome</p>
-            <input type="text" placeholder="name" />
-          </label>
-          <label>
-            <p>Nome de Usuario</p>
-            <input type="text" placeholder="user.name" />{" "}
-          </label>
-          <label>
-            <p>E-mail</p>
-            <input type="text" placeholder="user.name@ebag.com.br" />
-          </label>
-          <label>
-            Telefone <input type="text" placeholder="9 88933932" />
-          </label>
-          <label>
-            Setor <input type="text" placeholder="Comunicação e TI" />
-          </label>
-          <label>
-            Cargo <input type="text" placeholder="Técnico em informatica" />
-          </label>
+    <div id="header">
+      <Header />
 
-          <button type="submit" onClick={() => history.push("/home")}>
-            ENVIAR
+      <div id="page-profile">
+        <section className="sideProfile">
+          <button id="p" onClick={() => setState("p")}>
+            Editar Perfil
           </button>
-        </form>
+          <button id="c" onClick={() => setState("c")}>
+            Alterar senha
+          </button>
+        </section>
+        <div className="form">
+          {state === "p" && <EditProfile />}
+          {state === "c" && <ChangePassword />}
+        </div>
       </div>
     </div>
   );

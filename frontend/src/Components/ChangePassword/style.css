@@ -1,32 +1,14 @@
-#page-profile {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 50px 20%;
-}
-
-#page-profile .sideProfile {
-    width: 50%;
-    float: left;
-    border: 1px solid rgb(44, 44, 44);
+#change-password .password {
+    width: 100%;
+    height: 80vh;
+    padding: 15px 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 30px;
-    height: 80vh;
+    text-align: center;
+    border: 1px solid rgb(44, 44, 44);
 }
 
-#page-profile .sideProfile button{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    color: #000000;
-    padding-bottom: 10px;
-    background-color: rgb(255, 255, 255);
-}
-
-#page-profile .form {
-    width: 50%;
+#change-password .password form {
     display: flex;
     flex-direction: column;
     font-style: normal;
@@ -36,18 +18,18 @@
     padding-bottom: 10px;
 }
 
-#page-profile .form form label {
+#change-password .password form label {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-#page-profile .form form label p {
+#change-password .password form label p {
     display: flex;
     text-align: right;
     margin-right: 20px;
 }
 
-#page-profile .form form input {
+#change-password .password form input {
     border: 1px solid #000000;
     box-sizing: border-box;
     width: 50%;
@@ -58,12 +40,12 @@
     margin-bottom: 20px;
 }
 
-#page-profile .form form input:focus {
+#change-password .password form input:focus {
     border: 2px solid #1b1b1b;
     color: #000;
 }
 
-#page-profile .form button {
+#change-password .password button {
     border: none;
     background: #1DB73F;
     width: 80%;
@@ -74,6 +56,6 @@
     font-size: 30px;
 }
 
-#page-profile .form button:hover {
+#change-password .password button:hover {
     opacity: 0.9;
 }
