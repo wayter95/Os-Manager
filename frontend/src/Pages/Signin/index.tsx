@@ -33,8 +33,6 @@ const Signin = () => {
         toast.success(`Seja bem vindo ${username}`);
       } else {
         toast.error("Usuario ou senha incorretos", {
-          position: toast.POSITION.TOP_RIGHT,
-          autoClose: 8000,
         });
       }
     }, 2000);

@@ -1,6 +1,7 @@
 import React from "react";
+import { Route, BrowserRouter, Switch, Redirect, RouteProps as ReactDOMRouteProps } from "react-router-dom";
 
-import { Route, BrowserRouter, Switch,Redirect,RouteProps as ReactDOMRouteProps } from "react-router-dom";
+import { useAuth } from './services/auth';
 
 import Signin from "./Pages/Signin";
 import Signup from "./Pages/Signup";
@@ -19,6 +20,36 @@ interface RouteProps extends ReactDOMRouteProps {
   component: React.ComponentType;
 }
 
+const PrivateRoute: React.FC<RouteProps> = ({
+  isAdmin = false,
+  component: Component,
+  ...rest
+}) => {
+  const {user} = useAuth();
+  const isSigned = !!user;
+
+  return (
+    <Route 
+    {...rest}
+    render={() => {
+      return !isAdmin ? (
+        <Component />
+      ):(
+        <>
+        {
+          isSigned ? (
+            <Component />
+          ):  (
+            <Redirect to="/"/>
+          )
+        }
+        </>
+      )
+    }}
+    />
+  )
+}
+
 const Routes = () => {
   return (
     <BrowserRouter>
@@ -26,13 +57,14 @@ const Routes = () => {
         <Route component={Signin} exact path="/" />
         <Route component={Signup} path="/signup" />
 
-        <Route component={Home} path="/home" />
-        <Route component={Dashboard} path="/dashboard" />
-        <Route component={Os} exact path="/os" />
-        <Route component={Documents} path="/documents" />
-        <Route component={Users} path="/users" />
-        <Route component={Profile} path="/profile" />
-        <Route component={Info} path="/os/info" />
+        <PrivateRoute component={Home} path="/home" />
+        <PrivateRoute isAdmin component={Dashboard} path="/dashboard" />
+        <PrivateRoute component={Os} exact path="/os" />
+        <PrivateRoute isAdmin component={Documents} path="/documents" />
+        <PrivateRoute isAdmin component={Users} path="/users" />
+        <PrivateRoute component={Profile} path="/profile" />
+        <PrivateRoute isAdmin component={Info} path="/os/info" />
+
         <Route component={Identify} path="/identify" />
         <Route component={Recovery} path="/recovery" />
       </Switch>
