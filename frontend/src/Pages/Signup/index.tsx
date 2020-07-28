@@ -1,29 +1,57 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import './style.css';
+import "./style.css";
 
 const Signup = () => {
-  const [display, setDisplay] = useState('register');
+  const [display, setDisplay] = useState("register");
+  const [name, setName] = useState("");
+  const [userName, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [accessCode, setAccessCode] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [sector, setSector] = useState("");
+  const [office, setOffice] = useState("");
 
   const renderRegister = () => (
     <div className="register">
       <h1>Registre-se</h1>
       <label htmlFor="name">Nome: *</label>
-      <input type="text" placeholder="Digite seu nome:" />
+      <input
+        type="text"
+        placeholder="Digite seu nome:"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
 
       <label htmlFor="username">Nome de Usuario: *</label>
-      <input type="text" placeholder="Digite um nome de usuario:" />
+      <input
+        type="text"
+        placeholder="Digite um nome de usuario:"
+        value={userName}
+        onChange={(e) => setUsername(e.target.value)}
+      />
 
       <label htmlFor="password">Senha: *</label>
-      <input type="password" placeholder="Digite sua senha:" />
+      <input
+        type="password"
+        placeholder="Digite sua senha:"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
 
-      <label htmlFor="nome">Código de acesso: *</label>
-      <input type="text" placeholder="Digite aqui o codigo de acesso:" />
+      <label htmlFor="accessCode">Código de acesso: *</label>
+      <input
+        type="text"
+        placeholder="Digite aqui o codigo de acesso:"
+        value={accessCode}
+        onChange={(e) => setAccessCode(e.target.value)}
+      />
 
       <button
         className="btn"
         type="button"
-        onClick={() => setDisplay('continue')}
+        onClick={() => setDisplay("continue")}
       >
         Continuar
       </button>
@@ -40,20 +68,41 @@ const Signup = () => {
     <div className="continue">
       <h1>Dados de cadastro</h1>
       <label htmlFor="email">E-mail: *</label>
-      <input type="text" placeholder="Digite seu e-mail:" />
+      <input
+        type="text"
+        placeholder="Digite seu e-mail:"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
 
       <label htmlFor="phone">Telefone: *</label>
-      <input type="text" placeholder="Digite seu Telefone para contato:" />
+      <input
+        type="text"
+        placeholder="Digite seu Telefone para contato:"
+        value={phone}
+        onChange={(e) => setPhone(e.target.value)}
+      />
 
-      <label htmlFor="sectot">Setor: *</label>
-      <select name="sector">
-      <option value="" disabled selected hidden>Selecione o setor em que trabalha</option>
-      <option value="Infra">Infra</option>
-      <option value="TI">TI</option>
+      <label htmlFor="sector">Setor: *</label>
+      <select
+        name="sector"
+        value={sector}
+        onChange={(e) => setSector(e.target.value)}
+      >
+        <option value="" disabled selected hidden>
+          Selecione o setor em que trabalha
+        </option>
+        <option value="Infra">Infra</option>
+        <option value="TI">TI</option>
       </select>
 
       <label htmlFor="office">Cargo: *</label>
-      <input type="text" placeholder="Digite seu cargo:" />
+      <input
+        type="text"
+        placeholder="Digite seu cargo:"
+        value={office}
+        onChange={(e) => setOffice(e.target.value)}
+      />
 
       <button className="btn" type="submit">
         Concluir
@@ -67,8 +116,8 @@ const Signup = () => {
   return (
     <form>
       <div id="page-signup">
-        {display === 'register' && renderRegister()}
-        {display === 'continue' && renderContinue()}
+        {display === "register" && renderRegister()}
+        {display === "continue" && renderContinue()}
       </div>
     </form>
   );
