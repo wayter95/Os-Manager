@@ -6,19 +6,23 @@ import "./style.css";
 
 
 const ChangePassword: React.FC = () => {
-  const [isVisible, setVisible] = useState(false);
+  const [current, setCurrent] = useState("");
+  const [newPass, setNewPass] = useState("");
+  const [repeatPass, setRepeatPass] = useState("");
   const history = useHistory();
 
   function handleSubmit(e: any) {
     e.preventDefault();
-    setVisible(true);
+  
   }
   return (
     <div id="change-password">
       <form>
         <label>
           <p> Senha Atual </p>
-          <input type="password" />
+          <input type="password" 
+          value={current}
+          onChange={e => setCurrent(e.target.value)}/>
         </label>
         <label>
           <p> Nova senha </p>
