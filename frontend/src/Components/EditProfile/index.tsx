@@ -14,11 +14,11 @@ const EditProfile: React.FC = () => {
   }
   return (
     <div id="edit-profile">
-      <form className="profile">
-      <h1 className="icon">
-        <FaUserCircle size="50" /> User Name
-        <p>Alterar foto</p>
-      </h1>
+      <form>
+      <div className="icon">
+        <FaUserCircle size="50" /> 
+        <h2>User Name</h2>
+      </div>
         <label>
           <p> Nome </p>
           <input type="text" placeholder="name" />

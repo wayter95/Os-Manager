@@ -15,7 +15,7 @@ const ChangePassword: React.FC = () => {
   }
   return (
     <div id="change-password">
-      <form className="password">
+      <form>
         <label>
           <p> Senha Atual </p>
           <input type="password" />

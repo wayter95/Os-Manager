@@ -1,26 +1,23 @@
-#edit-profile .profile {
+#edit-profile {
     width: 100%;
     padding: 15px 30px;
     display: flex;
     flex-direction: column;
     text-align: center;
     border: 1px solid rgb(44, 44, 44);
-    height: 80vh;
+    height: calc(100vh - 140px);
 }
 
-#edit-profile .profile .icon {
+#edit-profile .icon {
+    margin-bottom: 30px;
+}
+#edit-profile .icon h2 {
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
     color: #000000;
-    padding-bottom: 10px;
 }
-#edit-profile .profile .icon p {
-    padding-left: 55px;
-    font-size: 20px;
-    color: #0066FF;
-}
-#edit-profile .profile form {
+#edit-profile form {
     display: flex;
     flex-direction: column;
     font-style: normal;
@@ -30,18 +27,18 @@
     padding-bottom: 10px;
 }
 
-#edit-profile .profile form label {
+#edit-profile form label {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-#edit-profile .profile form label p {
+#edit-profile form label p {
     display: flex;
     text-align: right;
     margin-right: 20px;
 }
 
-#edit-profile .profile form input {
+#edit-profile form input {
     border: 1px solid #000000;
     box-sizing: border-box;
     width: 50%;
@@ -52,22 +49,24 @@
     margin-bottom: 20px;
 }
 
-#edit-profile .profile form input:focus {
+#edit-profile form input:focus {
     border: 2px solid #1b1b1b;
     color: #000;
 }
 
-#edit-profile .profile button {
+#edit-profile form button {
     border: none;
     background: #1DB73F;
-    width: 80%;
+    width: 50%;
     border-radius: 20px;
-    margin-left: 20%;
+    margin-left: 25%;
+    margin-top: 30px;
     height: 40px;
     color: #fff;
     font-size: 30px;
+    transition: opacity 0.2s;
 }
 
-#edit-profile .profile button:hover {
+#edit-profile button:hover {
     opacity: 0.9;
 }

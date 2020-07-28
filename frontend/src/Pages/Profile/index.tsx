@@ -10,10 +10,9 @@ const Profile = () => {
   const [state, setState] = useState("p");
   const history = useHistory();
   return (
-    <div id="header">
+    <div id="page-profile">
       <Header />
-
-      <div id="page-profile">
+      <div className="content">
         <section className="sideProfile">
           <button id="p" onClick={() => setState("p")}>
             Editar Perfil

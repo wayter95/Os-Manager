@@ -1,6 +1,6 @@
-#change-password .password {
+#change-password {
     width: 100%;
-    height: 80vh;
+    height: calc(100vh - 140px);
     padding: 15px 30px;
     display: flex;
     flex-direction: column;
@@ -8,28 +8,28 @@
     border: 1px solid rgb(44, 44, 44);
 }
 
-#change-password .password form {
+#change-password  form {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
     color: #000000;
-    padding-bottom: 10px;
 }
 
-#change-password .password form label {
+#change-password form label {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-#change-password .password form label p {
+#change-password  form label p {
     display: flex;
     text-align: right;
     margin-right: 20px;
 }
 
-#change-password .password form input {
+#change-password form input {
     border: 1px solid #000000;
     box-sizing: border-box;
     width: 50%;
@@ -40,22 +40,24 @@
     margin-bottom: 20px;
 }
 
-#change-password .password form input:focus {
+#change-password form input:focus {
     border: 2px solid #1b1b1b;
     color: #000;
 }
 
-#change-password .password button {
+#change-password button {
     border: none;
     background: #1DB73F;
-    width: 80%;
+    width: 50%;
     border-radius: 20px;
-    margin-left: 20%;
+    margin-left: 25%;
+    margin-top: 30px;
     height: 40px;
     color: #fff;
     font-size: 30px;
+    transition: opacity 0.2s;
 }
 
-#change-password .password button:hover {
+#change-password button:hover {
     opacity: 0.9;
 }
