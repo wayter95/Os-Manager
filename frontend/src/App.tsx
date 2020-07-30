@@ -2,9 +2,15 @@ import React from 'react';
 import Routes from './routes'
 import './Global.css'
 
+import { AuthProvider } from './services/auth'
+
 function App() {
   return (
-  <Routes />
+    <>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    </>
   );
 }
 
