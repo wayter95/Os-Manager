@@ -1,7 +1,9 @@
 import express from "express";
-import Knex from './database/connection';
+
+import SectorsController from './controllers/SectorsControllers';
 
 const routes = express.Router();
+const sectorsController = new SectorsController();
 
 routes.get('/', (req, res) => {
     return res.json({
@@ -9,10 +11,6 @@ routes.get('/', (req, res) => {
     });
 });
 
-routes.get('/sectors', async (req, res) => {
-    const sectors = await Knex('sectors').select('*');
-
-    return res.json(sectors);
-})
+routes.get('/sectors', sectorsController.index);
 
 export default routes;
